@@ -20,7 +20,17 @@ def create_strcutre(name: str, directory: list):
         create_directory(structure)
         
         
+def create_file(path: str, name: str):
+    filepath = os.path.join(path, f'{name}.py')
+    if not os.path.exists(path):
+        os.makedirs(path)
+    f = open(filepath, "w")
+    f.close()
 
+
+@app.command()
+def schema(name:str):
+    create_file("app/schema" ,name)
 
 @app.command()
 def project(name: str):
