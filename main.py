@@ -28,7 +28,7 @@ def project(name: str):
     create_strcutre(name, directories)
           
     
-    subdirectories = ["models", "repos", "schema", "services", "tasts", "lib"]
+    subdirectories = ["models", "repos", "schema", "services", "tasks", "lib"]
     create_strcutre(os.path.join(name, "app"),subdirectories)
     typer.echo(f"Creating project {name}")
 
